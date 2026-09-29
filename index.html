@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>금탑한의원 | 구미 전통 한방 치료 054-715-7575</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard Variable',sans-serif;font-size:16px;color:#484848;background:#fff;line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%;object-fit:cover}
+a{text-decoration:none;color:inherit}
+ul,ol{list-style:none}
+button{cursor:pointer;border:none;background:none;font:inherit}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:#C8230D;border-radius:2px}
+
+:root{
+  --red:#C8230D;--red-lt:#E03318;--red-pale:#FEF2F1;
+  --ink:#222;--body:#484848;--sub:#888;--border:#DDDDDD;--gray-box:#FAFAFA;
+  --max-w:1500px;--pad-x:30px;
+}
+.inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x)}
+
+/* ── HEADER 190px (hd-top 130px + GNB 60px) ── */
+#hd{position:fixed;top:0;left:0;right:0;z-index:900;background:#fff;border-bottom:1px solid var(--border);transition:box-shadow .3s}
+#hd.scrolled{box-shadow:0 2px 16px rgba(0,0,0,.08)}
+.hd-top{height:130px;max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x);display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:14px}
+.logo-mark{width:52px;height:52px;border-radius:8px;background:var(--red);display:flex;align-items:center;justify-content:center}
+.logo-mark svg{width:28px;height:28px;fill:none;stroke:#fff;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.logo-name .ko{font-family:'Noto Serif KR',serif;font-size:22px;font-weight:700;color:var(--ink)}
+.logo-name .en{font-size:10px;color:#aaa;letter-spacing:.14em;text-transform:uppercase;margin-top:3px}
+.hd-right{display:flex;align-items:center;gap:28px}
+.hd-tel-block .label{font-size:11px;color:var(--sub);letter-spacing:.08em;margin-bottom:3px}
+.hd-tel-block .tel{display:flex;align-items:center;gap:8px;font-family:'Noto Serif KR',serif;font-size:26px;font-weight:700;color:var(--ink);letter-spacing:-.02em}
+.hd-tel-block .tel svg{width:20px;height:20px;fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round}
+.hd-divider{width:1px;height:48px;background:var(--border)}
+.hd-time{font-size:13px;color:var(--sub);line-height:1.9}
+.hd-time strong{display:block;font-size:11px;color:var(--red);font-weight:600;letter-spacing:.06em;margin-bottom:4px}
+.hd-reserve{background:var(--red);color:#fff;padding:13px 26px;border-radius:6px;font-size:14px;font-weight:600;letter-spacing:.03em;transition:background .25s;white-space:nowrap}
+.hd-reserve:hover{background:var(--red-lt)}
+.gnb-wrap{border-top:1px solid var(--border)}
+.gnb{height:60px;max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x);display:flex;align-items:center}
+.gnb > a{height:60px;display:flex;align-items:center;padding:0 22px;font-size:14px;font-weight:500;color:var(--body);border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap}
+.gnb > a:hover,.gnb > a.on{color:var(--red);border-bottom-color:var(--red)}
+.hd-ham{display:none;flex-direction:column;gap:5px;padding:8px}
+.hd-ham span{width:22px;height:2px;background:var(--ink);border-radius:2px}
+
+/* ── HERO ── */
+#hero{position:relative;height:100vh;min-height:680px;display:flex;align-items:center;padding-top:190px;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.75) 45%,rgba(0,0,0,.35) 72%,rgba(0,0,0,.1) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x);width:100%}
+.hero-small{font-size:14px;color:rgba(255,255,255,.6);letter-spacing:.12em;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.hero-small::before{content:'';width:28px;height:1px;background:var(--red)}
+.hero-tit{font-family:'Noto Serif KR',serif;font-size:clamp(36px,5vw,66px);font-weight:700;color:#fff;line-height:1.18;letter-spacing:-.04em;margin-bottom:22px}
+.hero-tit em{color:#ff6b5b;font-style:normal;display:block}
+.hero-desc{font-size:16px;color:rgba(255,255,255,.6);line-height:1.9;max-width:440px;margin-bottom:42px;font-weight:300}
+.hero-cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn-fill{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;padding:15px 30px;border-radius:6px;font-size:14px;font-weight:600;letter-spacing:.04em;box-shadow:0 6px 20px rgba(200,35,13,.4);transition:all .25s}
+.btn-fill:hover{background:var(--red-lt);transform:translateY(-2px)}
+.btn-fill svg,.btn-ghost svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.32);color:#fff;padding:15px 26px;border-radius:6px;font-size:14px;font-weight:400;transition:all .25s}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.hero-float{position:absolute;right:var(--pad-x);bottom:100px;background:rgba(255,255,255,.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:22px 28px;z-index:3;min-width:240px}
+.hero-float .f-label{font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.hero-float .f-val{font-size:14px;color:#fff;font-weight:600}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:7px}
+.hero-scroll span{font-size:9px;color:rgba(255,255,255,.35);letter-spacing:.18em;text-transform:uppercase}
+.scroll-bar{width:1px;height:44px;background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent);animation:sb 1.8s ease infinite}
+@keyframes sb{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.01%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ── INFO STRIP (레퍼런스 구조) ── */
+#info{background:#fff;border-bottom:1px solid var(--border)}
+.info-wrap{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x);display:grid;grid-template-columns:320px 1fr;gap:0;min-height:240px}
+.info-left{padding:40px 48px 40px 0;border-right:1px solid var(--border)}
+.info-left .il-label{font-size:11px;color:var(--sub);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.info-left .il-tel{display:flex;align-items:center;gap:10px;font-family:'Noto Serif KR',serif;font-size:32px;font-weight:700;color:var(--ink);margin-bottom:16px;letter-spacing:-.02em}
+.info-left .il-tel svg{width:22px;height:22px;fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round}
+.info-time{font-size:13px;color:var(--sub);line-height:2}
+.info-time li{display:flex;gap:10px}
+.info-time li span:first-child{color:var(--ink);font-weight:500;min-width:52px}
+.info-time .red{color:var(--red)}
+.info-right{padding:40px 48px;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.iq{display:flex;align-items:flex-start;gap:18px;padding:28px 24px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);cursor:pointer;transition:background .2s}
+.iq:nth-child(2n){border-right:none}
+.iq:nth-child(n+3){border-bottom:none}
+.iq:hover{background:#fafafa}
+.iq-ico{width:44px;height:44px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.iq-ico svg{width:22px;height:22px;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.iq1 .iq-ico{background:#FEF2F1}.iq1 .iq-ico svg{stroke:var(--red)}
+.iq2 .iq-ico{background:#EFF7ED}.iq2 .iq-ico svg{stroke:#2B8A20}
+.iq3 .iq-ico{background:#EEF4FF}.iq3 .iq-ico svg{stroke:#1A5FBB}
+.iq4 .iq-ico{background:#F5F5F5}.iq4 .iq-ico svg{stroke:#555}
+.iq-txt h4{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.iq-txt p{font-size:13px;color:var(--sub);line-height:1.6}
+.iq-arr{margin-left:auto;flex-shrink:0;color:var(--red)}
+.iq-arr svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;opacity:.5}
+
+/* ── 공통 섹션 헤더 (MD 타이포 규정) ── */
+.sh-tag{font-size:18px;font-weight:600;color:var(--red);letter-spacing:.02em;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.sh-tag::before{content:'';width:22px;height:2px;background:var(--red);flex-shrink:0}
+.sh-tit{font-family:'Noto Serif KR',serif;font-size:40px;font-weight:700;color:var(--ink);line-height:1.2;letter-spacing:-.04em;margin-bottom:14px}
+.sh-tit em{color:var(--red);font-style:normal}
+.sh-desc{font-size:16px;color:var(--body);line-height:1.9;max-width:540px}
+.sh{margin-bottom:52px}
+
+/* ── SEC2 진료과목  MD: pt:120 pb:205 ── */
+#sec2{background:#fff;padding:120px 0 205px}
+.sec2-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;gap:20px;flex-wrap:wrap}
+.swiper-btns{display:flex;gap:8px}
+.sw-btn{width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .2s}
+.sw-btn:hover{background:var(--red);border-color:var(--red)}
+.sw-btn:hover svg{stroke:#fff}
+.sw-btn svg{width:18px;height:18px;fill:none;stroke:var(--body);stroke-width:2;stroke-linecap:round}
+.svc-sw{overflow:visible}
+.svc-card{border-radius:12px;overflow:hidden;position:relative;cursor:pointer;transition:transform .4s,box-shadow .4s}
+.svc-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.14)}
+.svc-card img{width:100%;height:300px;object-fit:cover;transition:transform .7s}
+.svc-card:hover img{transform:scale(1.05)}
+.svc-label{position:absolute;bottom:0;left:0;right:0;padding:48px 24px 22px;background:linear-gradient(to top,rgba(0,0,0,.72),transparent)}
+.svc-label h3{font-size:17px;font-weight:600;color:#fff;margin-bottom:3px}
+.svc-label p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.5}
+.svc-label-tag{display:inline-block;background:var(--red);color:#fff;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:600;letter-spacing:.08em;margin-bottom:8px}
+
+/* ── WATERMARK BAR ── */
+#wm-bar{overflow:hidden;padding:28px 0;background:#f9f9f9;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.wm-text{font-family:'Noto Serif KR',serif;font-size:clamp(40px,6vw,80px);font-weight:700;color:rgba(0,0,0,.04);letter-spacing:-.01em;text-transform:uppercase;white-space:nowrap;animation:wmscroll 30s linear infinite}
+@keyframes wmscroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── ABOUT ── */
+#about{background:#fff;padding:120px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-img-wrap{position:relative;border-radius:12px;overflow:hidden;height:560px}
+.about-img-wrap img{width:100%;height:100%;object-fit:cover}
+.about-badge{position:absolute;bottom:0;right:0;background:var(--red);color:#fff;padding:28px 36px;border-radius:12px 0 0 0;text-align:center}
+.about-badge .n{font-family:'Noto Serif KR',serif;font-size:48px;font-weight:700;line-height:1}
+.about-badge .n sup{font-size:20px;vertical-align:super}
+.about-badge .t{font-size:11px;color:rgba(255,255,255,.75);letter-spacing:.1em;margin-top:5px}
+.about-txt p{font-size:16px;color:var(--body);line-height:2;margin-bottom:24px}
+/* MD sub4-gray: bg:#FAFAFA br:8px pad:20px 24px */
+.sub4-gray{background:var(--gray-box);border-radius:8px;padding:20px 24px;border:1px solid var(--border);margin-top:8px}
+.check-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--border)}
+.check-row:last-child{border-bottom:none}
+.check-ico{width:36px;height:36px;border-radius:6px;background:var(--red-pale);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.check-ico svg{width:18px;height:18px;fill:none;stroke:var(--red);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.check-txt h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:1px}
+.check-txt p{font-size:13px;color:var(--sub)}
+
+/* ── NUMBERS ── */
+#nums{background:var(--red);padding:64px 0}
+.num-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.num-cell{text-align:center;padding:0 32px;border-right:1px solid rgba(255,255,255,.2)}
+.num-cell:last-child{border-right:none}
+.num-cell .n{font-family:'Noto Serif KR',serif;font-size:48px;font-weight:700;color:#fff;line-height:1;margin-bottom:8px}
+.num-cell .n sub{font-size:20px;font-weight:400}
+.num-cell .t{font-size:13px;color:rgba(255,255,255,.7);letter-spacing:.06em}
+
+/* ── PROCESS  MD: STEP bg:primary br:25px 16px/600/white ── */
+#proc{background:#f8f8f8;padding:120px 0}
+.steps-wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin-top:56px}
+.steps-wrap::before{content:'';position:absolute;top:20px;left:calc(10% + 12px);right:calc(10% + 12px);height:1px;background:linear-gradient(90deg,var(--red),#f1a9a0,var(--red));z-index:0}
+.step{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;position:relative;z-index:1;padding:0 8px}
+.step-no{background:var(--red);color:#fff;border-radius:25px;padding:10px 18px;font-size:16px;font-weight:600;letter-spacing:.04em;box-shadow:0 4px 14px rgba(200,35,13,.3);transition:.25s}
+.step:hover .step-no{background:var(--red-lt);transform:translateY(-3px)}
+.step h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.step p{font-size:13px;color:var(--sub);line-height:1.6}
+
+/* ── FEATURES (다크) ── */
+#feat{background:#111;padding:120px 0;position:relative;overflow:hidden}
+#feat::before{content:'';position:absolute;right:-200px;top:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(200,35,13,.1) 0%,transparent 70%)}
+.feat-sh .sh-tag{color:#e06a60}.feat-sh .sh-tag::before{background:#e06a60}
+.feat-sh .sh-tit{color:#fff}.feat-sh .sh-tit em{color:#e06a60}
+.feat-sh .sh-desc{color:rgba(255,255,255,.45)}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden}
+.feat-card{padding:44px 36px;border-right:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);transition:background .25s}
+.feat-card:hover{background:rgba(255,255,255,.03)}
+.feat-card:nth-child(3n){border-right:none}
+.feat-card:nth-child(n+4){border-bottom:none}
+.feat-ico{width:52px;height:52px;border-radius:8px;border:1px solid rgba(200,35,13,.3);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.feat-ico svg{width:24px;height:24px;fill:none;stroke:#e06a60;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.feat-card h3{font-family:'Noto Serif KR',serif;font-size:18px;font-weight:600;color:#fff;margin-bottom:10px}
+.feat-card p{font-size:14px;color:rgba(255,255,255,.4);line-height:1.85}
+
+/* ── GALLERY  MD: 80s linear infinite ── */
+#gallery{background:#fff;padding:72px 0;overflow:hidden}
+.gal-head{max-width:var(--max-w);margin:0 auto 36px;padding:0 var(--pad-x)}
+.mq-row{display:flex;gap:14px;width:max-content}
+.mq-fwd{animation:mq-f 80s linear infinite}
+.mq-rev{animation:mq-r 80s linear infinite;margin-top:14px}
+@keyframes mq-f{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes mq-r{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+.mq-row:hover{animation-play-state:paused}
+.mq-item{width:260px;height:180px;border-radius:10px;overflow:hidden;flex-shrink:0}
+.mq-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.mq-item:hover img{transform:scale(1.06)}
+
+/* ── NEWS (게시판) 레퍼런스 ── */
+#news{background:#f8f8f8;padding:80px 0;border-top:1px solid var(--border)}
+.news-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x);display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.news-block{background:#fff;border-radius:10px;border:1px solid var(--border);overflow:hidden}
+.nb-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--border)}
+.nb-head h3{font-size:17px;font-weight:700;color:var(--ink)}
+.nb-head a{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:4px;transition:color .2s}
+.nb-head a:hover{color:var(--red)}
+.nb-head a svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.nb-row{display:flex;align-items:center;gap:12px;padding:14px 24px;border-bottom:1px solid #f2f2f2;transition:background .15s;cursor:pointer}
+.nb-row:last-child{border-bottom:none}
+.nb-row:hover{background:#fafafa}
+.nb-title{flex:1;font-size:14px;color:var(--body);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nb-title.new::after{content:'N';background:var(--red);color:#fff;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:6px;vertical-align:middle}
+.nb-date{font-size:12px;color:#aaa;flex-shrink:0}
+
+/* ── CONTACT (다크 좌 + 지도 우) ── */
+#contact{display:grid;grid-template-columns:440px 1fr}
+.con-left{background:#1A1A1A;padding:80px 52px;display:flex;flex-direction:column;gap:32px}
+.con-left .sh-tag{color:#e06a60}.con-left .sh-tag::before{background:#e06a60}
+.con-left .sh-tit{color:#fff;font-size:32px;margin-bottom:8px}
+.con-left .sh-desc{font-size:14px;color:rgba(255,255,255,.45)}
+.con-card{background:#252525;border-radius:8px;padding:20px 24px;display:flex;flex-direction:column;gap:16px}
+.con-row{display:flex;align-items:flex-start;gap:14px}
+.con-ico{width:40px;height:40px;border-radius:6px;background:rgba(200,35,13,.15);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.con-ico svg{width:18px;height:18px;fill:none;stroke:#e06a60;stroke-width:1.7;stroke-linecap:round}
+.cr-label{font-size:11px;color:rgba(255,255,255,.35);margin-bottom:3px;letter-spacing:.08em}
+.cr-val{font-size:14px;color:#fff;font-weight:500}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}
+.hg-row{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.hg-row .day{color:rgba(255,255,255,.4)}.hg-row .tm{color:rgba(255,255,255,.75);font-weight:500}
+.hg-row.red .day,.hg-row.red .tm{color:#e06a60}
+.con-btn{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;padding:14px 28px;border-radius:6px;font-size:14px;font-weight:600;width:fit-content;transition:.25s}
+.con-btn:hover{background:var(--red-lt)}
+.con-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.con-right{position:relative}
+.con-right iframe{width:100%;height:100%;min-height:480px;border:none;display:block}
+.map-bottom{position:absolute;bottom:0;left:0;right:0;background:var(--red);padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.map-bottom span{font-size:13px;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:7px}
+.map-bottom span svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.map-bottom a{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--red);padding:9px 18px;border-radius:6px;font-size:13px;font-weight:700;transition:.2s}
+.map-bottom a:hover{background:#fef2f1}
+.map-bottom a svg{width:13px;height:13px;fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round}
+
+/* ── FOOTER  MD: pt:40px pb:27px ── */
+footer{background:#0A0A0A}
+.ft-top{border-bottom:1px solid rgba(255,255,255,.07);padding:52px 0 44px}
+.ft-top-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x);display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.ft-brand .fk{font-family:'Noto Serif KR',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:4px}
+.ft-brand .fe{font-size:9px;color:#444;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.ft-brand p{font-size:12px;color:#444;line-height:1.9}
+.ft-cols{display:flex;gap:52px;flex-wrap:wrap}
+.ft-col h5{font-size:10px;font-weight:600;color:rgba(200,35,13,.8);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.ft-col li{margin-bottom:7px}
+.ft-col li a{font-size:12px;color:#3a3a3a;transition:color .2s}
+.ft-col li a:hover{color:rgba(255,255,255,.65)}
+.ft-btm{padding:40px 0 27px}
+.ft-btm-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.ft-btm p{font-size:11px;color:#333}
+.ft-btm-links{display:flex;gap:16px}
+.ft-btm-links a{font-size:11px;color:#333;transition:color .2s}
+.ft-btm-links a:hover{color:#888}
+
+/* ── QUICK FLOAT  MD: fixed right:30px z-index:102 ── */
+.qf{position:fixed;right:30px;bottom:36px;z-index:102;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.qf-call{display:flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:12px 20px;border-radius:100px;font-size:13px;font-weight:700;box-shadow:0 4px 20px rgba(200,35,13,.45);transition:.25s;text-decoration:none}
+.qf-call:hover{background:var(--red-lt);transform:translateY(-2px)}
+.qf-call svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.qf-top{width:42px;height:42px;border-radius:50%;background:#222;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(0,0,0,.3);transition:.25s}
+.qf-top:hover{background:var(--red)}
+.qf-top svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+
+/* ── AOS ── */
+.aos{opacity:0;transform:translateY(28px);transition:opacity .65s cubic-bezier(.4,0,.2,1),transform .65s cubic-bezier(.4,0,.2,1)}
+.aos.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.18s}.d3{transition-delay:.26s}.d4{transition-delay:.34s}.d5{transition-delay:.42s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1200px){
+  .about-grid{grid-template-columns:1fr;gap:52px}
+  .about-img-wrap{height:420px}
+  #contact{grid-template-columns:380px 1fr}
+}
+@media(max-width:1024px){
+  .hd-top{height:80px}
+  .hd-time,.hd-divider,.hd-tel-block{display:none}
+  .gnb-wrap{display:none}
+  .hd-ham{display:flex}
+  #hero{padding-top:80px}
+  .hero-float{display:none}
+  .info-wrap{grid-template-columns:1fr}
+  .info-left{border-right:none;border-bottom:1px solid var(--border);padding-right:0}
+  .info-right{padding:32px 0 0}
+  #contact{grid-template-columns:1fr}
+  .con-left{padding:60px var(--pad-x)}
+  .num-row{grid-template-columns:repeat(2,1fr);gap:32px}
+  .num-cell{border-right:none}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .feat-card:nth-child(2n){border-right:none}
+}
+@media(max-width:768px){
+  .sh-tit{font-size:30px}
+  .hero-tit{font-size:36px}
+  .news-inner{grid-template-columns:1fr}
+  .steps-wrap{grid-template-columns:repeat(3,1fr);gap:20px}
+  .steps-wrap::before{display:none}
+  .feat-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  :root{--pad-x:20px}
+  .hero-tit{font-size:30px}
+  .steps-wrap{grid-template-columns:repeat(2,1fr)}
+  .hero-cta-row{flex-direction:column}
+  .btn-fill,.btn-ghost{justify-content:center}
+  .info-right{grid-template-columns:1fr}
+  .iq:nth-child(2n){border-right:1px solid var(--border)}
+  .qf-call span{display:none}
+  .qf-call{padding:12px 14px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hd">
+  <div class="hd-top">
+    <a href="#" class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M9 8l3-5 3 5"/><circle cx="12" cy="17" r="2.2"/></svg>
+      </div>
+      <div class="logo-name">
+        <div class="ko">금탑한의원</div>
+        <div class="en">Gumtap Oriental Medicine Clinic</div>
+      </div>
+    </a>
+    <div class="hd-right">
+      <div class="hd-tel-block">
+        <div class="label">대표전화</div>
+        <a href="tel:054-715-7575" class="tel">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.68 9.78a19.79 19.79 0 01-3.07-8.68A2 2 0 012.59 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.57a16 16 0 006.52 6.52l.93-.93a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          054-715-7575
+        </a>
+      </div>
+      <div class="hd-divider"></div>
+      <div class="hd-time">
+        <strong>진료안내</strong>
+        평·금 09:00 – 18:30 (점심 12:30–13:30)<br>토요일 09:00 – 13:00 / 일·공휴일 휴진
+      </div>
+      <div class="hd-divider"></div>
+      <a href="tel:054-715-7575" class="hd-reserve">빠른 예약 상담</a>
+      <button class="hd-ham" aria-label="메뉴"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="gnb-wrap">
+    <nav class="gnb inner">
+      <a href="#about">한의원 소개</a>
+      <a href="#sec2">진료과목</a>
+      <a href="#feat">진료특장점</a>
+      <a href="#proc">진료프로세스</a>
+      <a href="#gallery">갤러리</a>
+      <a href="#news">커뮤니티</a>
+      <a href="#contact">오시는 길</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="https://img.magnific.com/free-photo/acupuncture-process_23-2148824045.jpg" alt="금탑한의원 침 치료" loading="eager">
+  </div>
+  <div class="hero-inner">
+    <div class="hero-small">손 끝에서 시작하는 치유의 미래</div>
+    <h1 class="hero-tit aos">
+      수십 년의 한방 전통<br>
+      <em>금탑한의원이<br>근본을 다스립니다</em>
+    </h1>
+    <p class="hero-desc aos d1">척추·관절·내과·부인과까지<br>체질에 맞는 1:1 맞춤 진료로 빠르게 회복합니다</p>
+    <div class="hero-cta-row aos d2">
+      <a href="tel:054-715-7575" class="btn-fill">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.68 9.78a19.79 19.79 0 01-3.07-8.68A2 2 0 012.59 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.57a16 16 0 006.52 6.52l.93-.93a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        전화예약 054-715-7575
+      </a>
+      <a href="#sec2" class="btn-ghost">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        진료과목 바로가기
+      </a>
+    </div>
+  </div>
+  <div class="hero-float">
+    <div class="f-label">TODAY HOURS</div>
+    <div class="f-val">평·금 09:00 – 18:30</div>
+    <div class="f-val" style="color:rgba(255,255,255,.5);font-size:12px;margin-top:3px">토 09:00–13:00 / 일·공휴일 휴진</div>
+  </div>
+  <div class="hero-scroll"><span>SCROLL</span><div class="scroll-bar"></div></div>
+</section>
+
+<!-- INFO STRIP -->
+<section id="info">
+  <div class="info-wrap">
+    <div class="info-left">
+      <div class="il-label">전화 예약 · 문의</div>
+      <a href="tel:054-715-7575" class="il-tel">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.68 9.78a19.79 19.79 0 01-3.07-8.68A2 2 0 012.59 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.57a16 16 0 006.52 6.52l.93-.93a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        054-715-7575
+      </a>
+      <ul class="info-time">
+        <li><span>월 – 금</span><span>09:00 – 18:30 (점심 12:30–13:30)</span></li>
+        <li><span class="red">토요일</span><span>09:00 – 13:00</span></li>
+        <li><span class="red">일·공휴일</span><span>휴진</span></li>
+      </ul>
+    </div>
+    <div class="info-right">
+      <div class="iq iq1">
+        <div class="iq-ico"><svg viewBox="0 0 24 24"><path d="M12 2v20M9 8l3-5 3 5"/><circle cx="12" cy="16" r="2"/></svg></div>
+        <div class="iq-txt"><h4>침·뜸 상담</h4><p>경혈 자극으로 통증·기혈 회복</p></div>
+        <div class="iq-arr"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
+      </div>
+      <div class="iq iq2">
+        <div class="iq-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <div class="iq-txt"><h4>의료진 소개</h4><p>30년 경력 전문 한의사</p></div>
+        <div class="iq-arr"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
+      </div>
+      <div class="iq iq3">
+        <div class="iq-ico"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="iq-txt"><h4>고객의 소리</h4><p>진료 후기 및 문의 남기기</p></div>
+        <div class="iq-arr"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
+      </div>
+      <div class="iq iq4">
+        <div class="iq-ico"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div class="iq-txt"><h4>비급여 항목</h4><p>비급여 항목 및 수가 안내</p></div>
+        <div class="iq-arr"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC2: 진료과목  MD pt:120 pb:205 -->
+<section id="sec2">
+  <div class="inner">
+    <div class="sec2-top">
+      <div class="sh">
+        <div class="sh-tag aos">진료과목</div>
+        <h2 class="sh-tit aos d1">당신의 내일을 위해<br><em>오늘도 돕습니다</em></h2>
+        <p class="sh-desc aos d2">수십 년 임상 경험으로 다양한 질환을 근본 치료합니다</p>
+      </div>
+      <div class="swiper-btns">
+        <button class="sw-btn svc-prev" aria-label="이전"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="sw-btn svc-next" aria-label="다음"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+    <div class="swiper svc-sw">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="svc-card">
+          <img src="https://img.magnific.com/free-photo/close-up-patient-acupuncture-procedure_23-2148815318.jpg" alt="침·뜸 치료">
+          <div class="svc-label"><span class="svc-label-tag">침·뜸</span><h3>침·뜸 치료</h3><p>경혈 자극으로 기혈 순환 회복</p></div>
+        </div></div>
+        <div class="swiper-slide"><div class="svc-card">
+          <img src="https://img.magnific.com/free-photo/close-up-woman-experiencing-acupuncture_23-2148815314.jpg" alt="추나·재활">
+          <div class="svc-label"><span class="svc-label-tag">추나·재활</span><h3>추나·한방 재활</h3><p>척추·관절 교정 전문 치료</p></div>
+        </div></div>
+        <div class="swiper-slide"><div class="svc-card">
+          <img src="https://img.magnific.com/free-photo/high-angle-smiley-woman-acupuncture-treatment_23-2149406797.jpg" alt="한약·탕약">
+          <div class="svc-label"><span class="svc-label-tag">한약·탕약</span><h3>한약·탕약 처방</h3><p>체질별 맞춤 한약 처방</p></div>
+        </div></div>
+        <div class="swiper-slide"><div class="svc-card">
+          <img src="https://img.magnific.com/free-photo/japanese-traditional-medicine-with-needles_23-2149406794.jpg" alt="부인과">
+          <div class="svc-label"><span class="svc-label-tag">부인과</span><h3>부인과 한방 치료</h3><p>여성 질환 전문 한방 처방</p></div>
+        </div></div>
+        <div class="swiper-slide"><div class="svc-card">
+          <img src="https://img.magnific.com/free-photo/high-angle-woman-acupuncture-treatment_23-2149406796.jpg" alt="내과">
+          <div class="svc-label"><span class="svc-label-tag">내과</span><h3>내과·소화기 치료</h3><p>위염·소화기 기능 회복</p></div>
+        </div></div>
+        <div class="swiper-slide"><div class="svc-card">
+          <img src="https://img.magnific.com/free-photo/close-up-hand-holding-acupuncture-needle_23-2148815315.jpg" alt="체질의학">
+          <div class="svc-label"><span class="svc-label-tag">체질의학</span><h3>체질의학·사상의학</h3><p>8체질 맞춤 치료 계획</p></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WATERMARK -->
+<div id="wm-bar">
+  <div class="wm-text">금탑한의원 &nbsp;&nbsp; GUMTAP ORIENTAL MEDICINE CLINIC &nbsp;&nbsp; 경북 구미시 &nbsp;&nbsp; 054-715-7575 &nbsp;&nbsp; 전통 한방 30년 &nbsp;&nbsp; 금탑한의원 &nbsp;&nbsp; GUMTAP ORIENTAL MEDICINE CLINIC &nbsp;&nbsp; 경북 구미시 &nbsp;&nbsp; 054-715-7575 &nbsp;&nbsp; 전통 한방 30년 &nbsp;&nbsp;</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="inner">
+    <div class="about-grid">
+      <div class="about-img-wrap aos">
+        <img src="https://img.magnific.com/free-photo/medium-shot-woman-acupuncture_23-2148815319.jpg" alt="금탑한의원 진료">
+        <div class="about-badge"><div class="n">30<sup>+</sup></div><div class="t">YEARS</div></div>
+      </div>
+      <div>
+        <div class="sh">
+          <div class="sh-tag aos">한의원 소개</div>
+          <h2 class="sh-tit aos d1">전통과 신뢰,<br><em>금탑한의원</em>입니다</h2>
+        </div>
+        <p class="aos d2">경북 구미시에서 30년 이상 지역 주민의 건강을 책임져온 금탑한의원입니다. 한방의 정수를 현대 의학적 지식과 융합하여, 척추·관절부터 내과·부인과까지 폭넓게 치료합니다.</p>
+        <p class="aos d3" style="margin-top:16px">단순히 증상을 다스리는 것이 아니라, 인체의 기(氣)·혈(血)·음양(陰陽)의 균형을 회복시켜 스스로 건강해질 수 있도록 돕는 것이 금탑한의원의 치료 철학입니다.</p>
+        <div class="sub4-gray aos d3" style="margin-top:28px">
+          <div class="check-row">
+            <div class="check-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="check-txt"><h4>30년 이상 임상 경험</h4><p>수만 건의 치료 경험으로 축적된 깊은 임상 노하우</p></div>
+          </div>
+          <div class="check-row">
+            <div class="check-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div class="check-txt"><h4>1:1 맞춤형 진료</h4><p>체질·증상에 따른 개인 맞춤 치료 계획 수립</p></div>
+          </div>
+          <div class="check-row">
+            <div class="check-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+            <div class="check-txt"><h4>빠른 예약·신속 진료</h4><p>대기 없는 예약 시스템, 정확한 진단과 처방</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section id="nums">
+  <div class="inner">
+    <div class="num-row">
+      <div class="num-cell aos"><div class="n">30<sub>년+</sub></div><div class="t">진료 경력</div></div>
+      <div class="num-cell aos d1"><div class="n">10,000<sub>+</sub></div><div class="t">누적 치료 건수</div></div>
+      <div class="num-cell aos d2"><div class="n">97<sub>%</sub></div><div class="t">환자 만족도</div></div>
+      <div class="num-cell aos d3"><div class="n">6<sub>개</sub></div><div class="t">전문 진료과목</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="proc">
+  <div class="inner">
+    <div class="sh" style="text-align:center;max-width:none">
+      <div class="sh-tag aos" style="justify-content:center">진료 프로세스</div>
+      <h2 class="sh-tit aos d1" style="text-align:center">처음 방문부터 <em>치료 완료</em>까지</h2>
+    </div>
+    <div class="steps-wrap">
+      <div class="step aos"><div class="step-no">STEP 01</div><h4>전화 예약</h4><p>054-715-7575<br>진료 예약·문의</p></div>
+      <div class="step aos d1"><div class="step-no">STEP 02</div><h4>내원 접수</h4><p>내원 후<br>접수 및 대기</p></div>
+      <div class="step aos d2"><div class="step-no">STEP 03</div><h4>한의사 진찰</h4><p>1:1 맞춤<br>체질·증상 진단</p></div>
+      <div class="step aos d3"><div class="step-no">STEP 04</div><h4>치료 시행</h4><p>침·뜸·추나<br>한약 처방</p></div>
+      <div class="step aos d4"><div class="step-no">STEP 05</div><h4>경과 관리</h4><p>지속 관찰 및<br>재진 스케줄링</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="feat">
+  <div class="inner">
+    <div class="sh feat-sh">
+      <div class="sh-tag aos">진료 특장점</div>
+      <h2 class="sh-tit aos d1">왜 금탑한의원인가<br><em>6가지 이유</em></h2>
+      <p class="sh-desc aos d2">30년 전통, 지역 최고 수준의 한방 의료 서비스</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card aos"><div class="feat-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>30년 검증된 임상력</h3><p>수만 건의 치료 경험으로 어떤 증상도 빠르고 정확하게 진단·치료합니다.</p></div>
+      <div class="feat-card aos d1"><div class="feat-ico"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><h3>1:1 맞춤 진료</h3><p>환자 개인의 체질과 생활 환경을 충분히 파악한 후, 최적의 치료 계획을 세웁니다.</p></div>
+      <div class="feat-card aos d2"><div class="feat-ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3>근본 치료 지향</h3><p>증상 완화에만 그치지 않고, 질병의 뿌리를 찾아 재발이 없도록 치료합니다.</p></div>
+      <div class="feat-card aos d3"><div class="feat-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div><h3>지역 30년 신뢰</h3><p>구미시민이 검증한 30년 전통의 한의원, 그 이름 하나가 신뢰의 증거입니다.</p></div>
+      <div class="feat-card aos d4"><div class="feat-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><h3>신속한 진료</h3><p>불필요한 대기 없이 예약 시간에 맞춰 빠르고 정확하게 진료를 제공합니다.</p></div>
+      <div class="feat-card aos d5"><div class="feat-ico"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3>체계적 사후관리</h3><p>치료 후에도 경과를 지속 관리하며 재발 방지와 건강 유지에 힘씁니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY  MD: 80s linear infinite -->
+<section id="gallery">
+  <div class="gal-head"><div class="sh-tag">치료 갤러리</div></div>
+  <div>
+    <div class="mq-row mq-fwd">
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-patient-acupuncture-procedure_23-2148815318.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-woman-experiencing-acupuncture_23-2148815314.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/medium-shot-woman-acupuncture_23-2148815319.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/acupuncture-process-client_23-2148824047.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-hand-holding-needle_23-2148815309.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/japanese-traditional-medicine-with-needles_23-2149406794.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/high-angle-smiley-woman-acupuncture-treatment_23-2149406797.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-acupuncture-procedure_23-2148815310.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-patient-acupuncture-procedure_23-2148815318.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-woman-experiencing-acupuncture_23-2148815314.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/medium-shot-woman-acupuncture_23-2148815319.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/acupuncture-process-client_23-2148824047.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-hand-holding-needle_23-2148815309.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/japanese-traditional-medicine-with-needles_23-2149406794.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/high-angle-smiley-woman-acupuncture-treatment_23-2149406797.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-acupuncture-procedure_23-2148815310.jpg" alt=""></div>
+    </div>
+    <div class="mq-row mq-rev">
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-hand-with-acupuncture-needle_23-2148815316.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-hand-holding-acupuncture-needle_23-2148815311.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-hand-holding-acupuncture-needle_23-2148815315.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/high-angle-woman-acupuncture-treatment_23-2149406796.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/acupuncture-process_23-2148824045.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/japanese-traditional-medicine-with-needle-side-view_23-2149406793.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/acupuncture-process-close-up_23-2148824046.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-patient-acupuncture-procedure_23-2148815318.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-hand-with-acupuncture-needle_23-2148815316.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-hand-holding-acupuncture-needle_23-2148815311.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-hand-holding-acupuncture-needle_23-2148815315.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/high-angle-woman-acupuncture-treatment_23-2149406796.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/acupuncture-process_23-2148824045.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/japanese-traditional-medicine-with-needle-side-view_23-2149406793.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/acupuncture-process-close-up_23-2148824046.jpg" alt=""></div>
+      <div class="mq-item"><img src="https://img.magnific.com/free-photo/close-up-patient-acupuncture-procedure_23-2148815318.jpg" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <div class="inner" style="padding-bottom:0">
+    <div class="sh">
+      <div class="sh-tag aos">커뮤니티</div>
+      <h2 class="sh-tit aos d1">병원 소식을 매일<br><em>정리해드립니다</em></h2>
+    </div>
+  </div>
+  <div class="news-inner">
+    <div class="news-block aos">
+      <div class="nb-head"><h3>공지사항</h3><a href="#">더보기 <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></a></div>
+      <div class="nb-row"><span class="nb-title new">추석 연휴 진료 안내 (9월 27일~10월 3일)</span><span class="nb-date">2024.09.20</span></div>
+      <div class="nb-row"><span class="nb-title">10월 한방 건강강좌 개최 안내</span><span class="nb-date">2024.09.15</span></div>
+      <div class="nb-row"><span class="nb-title">추나요법 건강보험 급여 안내</span><span class="nb-date">2024.09.05</span></div>
+      <div class="nb-row"><span class="nb-title">금탑한의원 30주년 감사 이벤트</span><span class="nb-date">2024.08.28</span></div>
+      <div class="nb-row"><span class="nb-title">침 치료 효과 및 적응증 안내</span><span class="nb-date">2024.08.15</span></div>
+    </div>
+    <div class="news-block aos d1">
+      <div class="nb-head"><h3>건강정보</h3><a href="#">더보기 <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></a></div>
+      <div class="nb-row"><span class="nb-title new">가을철 환절기 면역력 높이는 한방 방법</span><span class="nb-date">2024.09.18</span></div>
+      <div class="nb-row"><span class="nb-title">허리 통증 자가 진단 및 한방 치료법</span><span class="nb-date">2024.09.10</span></div>
+      <div class="nb-row"><span class="nb-title">갱년기 증상 완화에 효과적인 한약 처방</span><span class="nb-date">2024.09.02</span></div>
+      <div class="nb-row"><span class="nb-title">소화불량·역류성 식도염 한방 치료 안내</span><span class="nb-date">2024.08.22</span></div>
+      <div class="nb-row"><span class="nb-title">오십견·어깨 통증 침 치료 효과</span><span class="nb-date">2024.08.12</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="con-left">
+    <div>
+      <div class="sh-tag">오시는 길</div>
+      <h2 class="sh-tit" style="margin-bottom:8px">안전하고 편안한<br>방문을 돕겠습니다</h2>
+      <p class="sh-desc" style="font-size:14px">경북 구미시에서 30년 이상 지역 주민과 함께한 금탑한의원입니다</p>
+    </div>
+    <div class="con-card">
+      <div class="con-row">
+        <div class="con-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="cr-label">주소</div><div class="cr-val">경북 구미시 구미중앙로 52</div></div>
+      </div>
+      <div class="con-row">
+        <div class="con-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.68 9.78a19.79 19.79 0 01-3.07-8.68A2 2 0 012.59 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.57a16 16 0 006.52 6.52l.93-.93a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div><div class="cr-label">대표전화</div><div class="cr-val">054-715-7575</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="cr-label" style="color:rgba(255,255,255,.35);font-size:11px;letter-spacing:.1em;margin-bottom:12px">진료시간</div>
+      <div class="hours-grid">
+        <div class="hg-row"><span class="day">월 – 금</span><span class="tm">09:00 – 18:30</span></div>
+        <div class="hg-row red"><span class="day">토요일</span><span class="tm">09:00 – 13:00</span></div>
+        <div class="hg-row red"><span class="day">일·공휴일</span><span class="tm">휴진</span></div>
+        <div class="hg-row"><span class="day">점심시간</span><span class="tm">12:30 – 13:30</span></div>
+      </div>
+    </div>
+    <a href="tel:054-715-7575" class="con-btn">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.68 9.78a19.79 19.79 0 01-3.07-8.68A2 2 0 012.59 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.57a16 16 0 006.52 6.52l.93-.93a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      지금 바로 전화 예약하기
+    </a>
+  </div>
+  <div class="con-right">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.5!2d128.3396!3d36.1193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z6riw7YWM7ZWo7J24!5e0!3m2!1sko!2skr!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="금탑한의원 위치"></iframe>
+    <div class="map-bottom">
+      <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>경북 구미시 구미중앙로 52</span>
+      <a href="https://map.naver.com/v5/search/경북 구미시 구미중앙로 52" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>길찾기</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER  MD: pt:40px pb:27px -->
+<footer>
+  <div class="ft-top">
+    <div class="ft-top-inner">
+      <div class="ft-brand">
+        <div class="fk">금탑한의원</div>
+        <div class="fe">Gumtap Oriental Medicine Clinic</div>
+        <p>대표: 원장 &nbsp;|&nbsp; 주소: 경북 구미시 구미중앙로 52<br>대표전화: 054-715-7575 &nbsp;|&nbsp; 팩스: 054-715-xxxx</p>
+      </div>
+      <div class="ft-cols">
+        <div class="ft-col">
+          <h5>진료과목</h5>
+          <ul>
+            <li><a href="#sec2">침·뜸 치료</a></li>
+            <li><a href="#sec2">추나·한방 재활</a></li>
+            <li><a href="#sec2">한약·탕약 처방</a></li>
+            <li><a href="#sec2">부인과 한방</a></li>
+            <li><a href="#sec2">내과·소화기</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h5>한의원 안내</h5>
+          <ul>
+            <li><a href="#about">한의원 소개</a></li>
+            <li><a href="#feat">진료 특장점</a></li>
+            <li><a href="#proc">진료 프로세스</a></li>
+            <li><a href="#news">커뮤니티</a></li>
+            <li><a href="#contact">오시는 길</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h5>연락처</h5>
+          <ul>
+            <li><a href="tel:054-715-7575">☎ 054-715-7575</a></li>
+            <li><a href="#contact">경북 구미시 구미중앙로 52</a></li>
+            <li><a href="#">평일 09:00 – 18:30</a></li>
+            <li><a href="#">토요일 09:00 – 13:00</a></li>
+            <li><a href="#">일·공휴일 휴진</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ft-btm">
+    <div class="ft-btm-inner">
+      <p>© 2024 금탑한의원. All rights reserved. &nbsp;|&nbsp; 사업자등록번호: 123-45-67890</p>
+      <div class="ft-btm-links"><a href="#">개인정보처리방침</a><a href="#">이용약관</a><a href="#">사이트맵</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- QUICK FLOAT  MD: fixed right:30px z-index:102 -->
+<div class="qf">
+  <a href="tel:054-715-7575" class="qf-call">
+    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.68 9.78a19.79 19.79 0 01-3.07-8.68A2 2 0 012.59 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.57a16 16 0 006.52 6.52l.93-.93a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <span>054-715-7575</span>
+  </a>
+  <button class="qf-top" onclick="scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로">
+    <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+/* Swiper  MD 브레이크포인트 */
+new Swiper('.svc-sw',{
+  slidesPerView:1.1,spaceBetween:10,loop:true,grabCursor:true,
+  autoplay:{delay:3500,disableOnInteraction:false},speed:1000,
+  navigation:{nextEl:'.svc-next',prevEl:'.svc-prev'},
+  breakpoints:{
+    320:{slidesPerView:1.1,spaceBetween:10},
+    420:{slidesPerView:1.5,spaceBetween:10},
+    640:{slidesPerView:2.5,spaceBetween:10},
+    1024:{slidesPerView:4,spaceBetween:10},
+    1400:{slidesPerView:4,spaceBetween:24}
+  }
+});
+
+/* AOS  threshold:0.12  rootMargin:0px 0px -40px 0px  once:true */
+const obs=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.aos').forEach(el=>obs.observe(el));
+
+/* Header scroll */
+const hd=document.getElementById('hd');
+addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>60),{passive:true});
+</script>
+</body>
+</html>

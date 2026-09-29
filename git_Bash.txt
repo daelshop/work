@@ -1,0 +1,4 @@
+cd "/f/_0_G/___다엘샵/클로드/git"
+git add .
+git commit -m "init"
+git push origin main
